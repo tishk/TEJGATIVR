@@ -21,14 +21,8 @@ public class main {
     public static void main(String[] arg){
 
 //        AuthenticatePin2 authenticatePin2=new AuthenticatePin2();
-        try {
-            testPin1();
+        //            testPin1();
 //            testTransactionarzi();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ServerNotActiveException e) {
-            e.printStackTrace();
-        }
     }
     private static void testTransactionarzi() throws IOException, ServerNotActiveException {
         Transaction transaction=new Transaction();
