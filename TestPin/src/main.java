@@ -21,7 +21,7 @@ public class main {
     public static void main(String[] arg) throws IOException, ServerNotActiveException {
 
 //        AuthenticatePin2 authenticatePin2=new AuthenticatePin2();
-                    testPin1();
+//                    testPin1();
 //            testTransactionarzi();
     }
     private static void testTransactionarzi() throws IOException, ServerNotActiveException {
