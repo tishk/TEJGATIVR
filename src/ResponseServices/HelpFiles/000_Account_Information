@@ -1,0 +1,49 @@
+
+Account_Information:
+================================================================================
+description:get Information of accountNumber
+________________________________________________________________________________
+request parameters :                                                            |
+--------------------------------------------------------------------------------|
+param 0:Gateway IP                       :10.39.41.65                           |
+param 1:Gateway Port                     :1364                                  |
+param 2:Command Code                     :000                                   |
+param 3:accountNumber number                   :3435531082                            |
+param 4:specified response filed         :4                                     |
+________________________________________________________________________________|
+response parameters:                                                            |
+--------------------------------------------------------------------------------|
+start of response is   :$                                                       |
+Separator of fields is :*                                                       |
+end of response is     :$                                                       |
+--------------------------------------------------------------------------------|
+param 0 :ActionCode                      :0000                                  |
+param 1 :MessageSequence                 :123456789123                          |
+param 2 :ChannelType                     :TB                                    |
+param 3 :ChannelID                       :1                                     |
+param 4 :AccountNumber                   :3435531082                            |
+param 5 :AccountGroup                    :045                                   |
+param 6 :AccountCurrency                 :364                                   |
+param 7 :AccountStatus                   :1              //or 0 active accountNumber  |
+param 8 :AccountHost                     :2                                     |
+param 9 :AccountBranchCode               :25635                                 |
+param 10:PersonType                      :1              //or 2 or 3            |
+param 11:LatinName                       :Mohammad                              |
+param 12:LatinFamily                     :Mohammadi                             |
+param 13:FarsiName                       :محمد                                 |
+param 14:FarsiFamily                     :محمدی                                |
+param 15:FatherName                      :Ali                                   |
+param 16:NationalCode                    :1234567890                            |
+param 17:BirthDay                        :13601124                              |
+param 18:BirthPlace                      :Tehran                                |
+param 19:Address1                        :Tehran-taleghani                      |
+param 20:Address2                        :Tehran-valiasr                        |
+param 21:HomePhone                       :88526365                              |
+param 22:OfficePhone                     :88695252                              |
+param 23:CellPhone                       :09377777777                           |
+param 24:CreationDateTime                :13860102221145                        |
+param 25:ResponseDateTime                :13940723250526                        |
+param 26:Mac                             :1                                     |
+                                                                                |
+________________________________________________________________________________|
+================================================================================

@@ -1,0 +1,20 @@
+2016-06-19 17:14:49,864 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 17:17:08,613 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 17:18:22,494 ERROR [Mainchannel.MainMQ:199] sendAndReceivetime out :Time is : 11793
+2016-06-19 17:18:22,497 ERROR [Mainchannel.MainMQ:199] sendAndReceivetime out :Time is : 11795
+2016-06-19 17:18:22,494 ERROR [Mainchannel.MainMQ:199] sendAndReceivetime out :Time is : 11793
+2016-06-19 17:19:32,348 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 17:20:42,310 ERROR [Mainchannel.MainMQ:199] sendAndReceivetime out :Time is : 7001
+2016-06-19 17:23:17,858 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 17:57:50,947 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 17:59:26,202 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 18:10:59,098 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 18:14:06,772 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 18:17:24,580 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 18:17:25,831 ERROR [Mainchannel.util.JMSConnectionPool.MQSessionPool:185] com.ibm.mq.MQException: MQJE001: An MQException occurred: Completion Code 2, Reason 2009
+MQJE016: MQ queue manager closed channel immediately during connect
+Closure reason = 2009
+2016-06-19 18:17:25,831 ERROR [Mainchannel.util.JMSConnectionPool.MQSessionPool:188] javax.jms.JMSException: MQJMS2005: failed to create MQQueueManager for '10.39.41.62:IVRN'
+2016-06-19 18:17:25,832 ERROR [Mainchannel.MainMQ:133] MQJMS2005: failed to create MQQueueManager for '10.39.41.62:IVRN'
+2016-06-19 18:19:02,242 ERROR [Mainchannel.MainMQ:64] here
+2016-06-19 18:21:20,777 ERROR [Mainchannel.MainMQ:64] here

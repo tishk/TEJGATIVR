@@ -1,0 +1,14 @@
+2016-05-21 15:33:45,657 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 15:33:45,861 ERROR [Mainchannel.util.JMSConnectionPool.MQSessionPool:185] com.ibm.mq.MQException: MQJE001: An MQException occurred: Completion Code 2, Reason 2059
+MQJE011: Socket connection attempt refused
+2016-05-21 15:33:45,861 ERROR [Mainchannel.util.JMSConnectionPool.MQSessionPool:188] javax.jms.JMSException: MQJMS2005: failed to create MQQueueManager for '10.39.41.62:IVRN'
+2016-05-21 15:33:45,861 ERROR [Mainchannel.MainMQ:133] MQJMS2005: failed to create MQQueueManager for '10.39.41.62:IVRN'
+2016-05-21 20:02:02,437 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:11:31,526 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:15:11,077 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:17:50,618 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:21:38,476 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:25:03,861 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:31:11,165 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:34:34,978 ERROR [Mainchannel.MainMQ:64] here
+2016-05-21 20:34:48,440 ERROR [Mainchannel.MainMQ:64] here

@@ -1,0 +1,44 @@
+
+Account_ChequeStatus:
+================================================================================
+description:get Status Of check
+
+Cheque Status is in below cases:
+
+a.	incorrect
+b.	passed
+c.	not passed
+d.	Canceled
+e.	Returns
+f.	Blocked
+________________________________________________________________________________
+request parameters :
+--------------------------------------------------------------------------------
+param 0:Gateway IP                       :10.39.41.65
+param 1:Gateway Port                     :1364
+param 2:Command Code                     :001
+param 3:accountNumber number                   :3435531082
+param 4:Cheque Serial Number             :1234567
+param 5:Cheque Amount                    :1250000
+param 6:Cheque operation Date            :13870718
+________________________________________________________________________________
+response parameters:
+--------------------------------------------------------------------------------
+start of response is   :$
+Separator of fields is :*
+end of response is     :$
+--------------------------------------------------------------------------------
+param 0 :ActionCode                      :0000
+param 1 :MessageSequence                 :123456789123
+param 2 :ChannelType                     :TB
+param 3 :ChannelID                       :1
+param 4 :AccountNumber                   :3435531082
+param 5:Cheque Serial Number             :1234567
+param 6:Cheque Amount                    :1250000
+param 7:Cheque operation Date            :13870718
+param 8:Cheque Status                    :0
+param 9:Cheque Status Description        :FAULT
+param 10:ResponseTime                    :13940729080201
+param 11:MAC                             :1
+________________________________________________________________________________
+================================================================================

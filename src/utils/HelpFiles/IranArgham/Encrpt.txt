@@ -1,0 +1,91 @@
+public static string createAnsiPinBlock(string pan, string pin)
+        {
+            string sPANPart = "0000" + pan.Substring(pan.Length-13, 12);
+            string sPINPart = ("0" + System.Convert.ToString(pin.Length) + pin + "FFFFFFFFFFFFFFFF").Substring(0,16);
+            return XorBlock(sPANPart,sPINPart);
+        }
+
+
+public static string XorBlock(string data1, string data2)
+        {
+            return StringToHex(XorBlock(CSecurity.HexToString(data1), CSecurity.HexToString(data2)));
+        }
+
+public static string StringToHex(byte[] values)
+        {
+            string sRet = string.Empty;
+            foreach (byte b in values)
+            {
+                int value = Convert.ToInt32(b);
+                string shex = String.Format("{0:X}", value);
+                if (shex.Length == 1) shex = "0" + shex;
+                sRet += shex;
+            }
+            return sRet;
+        }
+public static byte[] HexToString(string str)
+        {
+            byte[] oRet = new byte[(int)(str.Length / 2)];
+            int iCounter = 0;
+            for (int i = 0; i < str.Length; i += 2)
+            {
+                string sTemp = str[i].ToString() + str[i + 1].ToString();
+                oRet[iCounter] = System.Convert.ToByte(System.Convert.ToInt32(sTemp, 16));
+                iCounter++;
+            }
+            return oRet;
+        }
+public static string PerformDES(string Key, string Data)
+        {
+            string sMethodName = "PerformDES";
+            try
+            {
+                string sRet = string.Empty;
+                DES oDes = DES.Create();
+
+                System.IO.MemoryStream oOutStream = new System.IO.MemoryStream();
+                oDes.Key = @HexToString(Key);
+                oDes.IV = new byte[8];
+                //Data = HexToString1(Data);
+                oDes.Padding = PaddingMode.None;
+
+                CryptoStream encStream = new CryptoStream(oOutStream, oDes.CreateEncryptor(), CryptoStreamMode.Write);
+
+                BinaryWriter sw = new BinaryWriter(encStream);
+
+                int iLen = (Data.Length / 2) % 8;
+                if (iLen != 0)
+                    for (int i = iLen; i < 8; i++)
+                        Data += "00";
+                sw.Write(HexToString(Data));
+
+                sw.Flush();
+                encStream.FlushFinalBlock();
+                sw.Flush();
+
+                sRet = StringToHex(oOutStream.ToArray());
+
+                sRet = sRet.Substring(0, 16);
+                sw.Close();
+                encStream.Close();
+
+                oOutStream.Close();
+                oOutStream.Dispose();
+                oOutStream = null;
+                //sw.Dispose();                
+                sw = null;
+                encStream.Dispose();
+                encStream = null;
+                oDes.Clear();
+                oDes = null;
+                return sRet;
+            }
+            catch (Exception ex)
+            {
+                //CGeneral.Log.LogError(_ClassName, sMethodName, ex.Message);
+                ex.Source = sMethodName;
+
+                throw;
+
+            }
+        }

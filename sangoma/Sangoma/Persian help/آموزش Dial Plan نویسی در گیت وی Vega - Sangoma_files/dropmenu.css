@@ -1,0 +1,209 @@
+#drop-cats .the-father{
+	height:135px;
+	border:2px solid #555;
+	margin:30px 64px 30px 52px;
+	position: relative;
+	width:408px;
+	background: #ffffff;
+}
+#drop-cats .the-father p {
+	margin:0;
+}
+#drop-cats #cu-left,#drop-cats #cu-right {
+	bottom: -2px;
+	color: #FFFFFF;
+	cursor: pointer;
+	direction: ltr;
+	font-size: 120%;
+	padding: 2px 4px;
+	position: absolute;
+	height:131px;
+	border: 2px solid #555;
+	background: #FFF;
+}
+#drop-cats #cu-left {
+	left: -31px;
+	border-right:1px solid #555
+}
+#drop-cats #cu-right {
+	right: -31px;
+	border-left:1px solid #555
+}
+
+#drop-cats .col {
+	height:130px;
+	margin-top: 0;
+	float:right;
+	width:80px !important;
+}
+#drop-cats.right .col{
+	margin-right:0 !important;
+	margin-left:20px !important;
+}
+#drop-cats.left .col{
+	margin-left:0 !important;
+	margin-right:20px !important;
+}
+
+#drop-cats .p-left {
+	text-align:center;
+	padding:35px 0 ;
+}
+#drop-cats .p-right {
+	padding:0 65px;
+	line-height: 25px;
+	font-size:14px;
+	text-align: justify;
+	font-family: inherit;
+}
+#drop-cats.left .p-right  {
+	direction:ltr
+}
+#drop-cats.right .p-right {
+	direction:rtl
+}
+#drop-cats .p-right button {
+	font-family:inherit !important;
+}
+#drop-cats .p-bottom {
+	height: 185px;
+	padding: 0 0 20px 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+#drop-cats.right .p-bottom {
+	direction:rtl
+}
+#drop-cats.left .p-bottom {
+	direction:ltr;
+}
+#drop-cats #layer-container h1 {
+	float:right;
+	margin-right: 20px;
+	color:#00C6BC;
+}
+
+#drop-cats .layer-container{
+	min-height:356px;
+	height: auto;
+	margin:0;
+	width:516px;
+	padding:5px;
+	position:relative;
+}
+#drop-cats.left .layer-container {
+	float:left;
+	border-left:1px solid #ccc;
+}
+#drop-cats.right .layer-container {
+	float:right;
+	border-right:1px solid #ccc;
+}
+#drop-cats .chevron-left {
+	display: none;
+	margin-top:4px;
+}
+#drop-cats.right .chevron-left{
+	float:left;
+}
+#drop-cats.left .chevron-left{
+	float:right;
+}
+#drop-cats #sub-cats .cat-item{
+	color: #333399;
+	font-family: arial;
+	font-size: 13px;
+	height: 25px;
+	margin: 7px 8px;
+	border-radius: 6px;
+	padding:0 7px;
+	cursor: pointer;
+	min-width: 110px;
+	position:relative;
+	color:#555;
+}
+#drop-cats .layer .cat-item{
+	color: #333399;
+	cursor: pointer;
+	font-family: arial;
+	font-size: 15px;
+	min-width: 170px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#drop-cats .layer .cat-item:first-child{
+	padding-top: 10px;
+}
+#drop-cats .p-bottom .cat-item {
+	height: 130px;
+	overflow: hidden;
+	text-align: center;
+}
+#drop-cats.left .p-bottom .cat-item{
+	float:left;
+}
+#drop-cats.right .p-bottom .cat-item{
+	float:right;
+}
+#item-cont td:last-child .span2 {
+	margin-left:0 !important;
+}
+#drop-cats .layer a, #sub-cats a{
+	color: #333399;
+}
+#drop-cats .layer .cat-item.selected .catIdChild, .layer .cat-item:hover .catIdChild{
+	background: #bbccff;
+	background: url("../img/bcf-gradient.svg") repeat-x scroll 0 0 #bbccff;
+}
+#drop-cats .layer a:hover{
+	text-decoration: none;
+}
+#drop-cats  .layer {
+	width:210px;
+}
+#drop-cats.right .layer{
+	float:right;
+}
+#drop-cats.left .layer{
+	float:left;
+}
+#drop-cats.right .cat-item:first-child{
+	border-top-right-radius: 8px;
+}
+#drop-cats.left .cat-item:first-child{
+	border-top-left-radius: 8px;
+}
+.cat-item a {
+	font-size:14px;
+}
+#drop-cats  .catIdChild{
+	border-bottom: 1px solid #ccc;
+	height:30px;
+	padding:5px;
+}
+#drop-cats .catIdChild ul {
+	list-style-type: disc;
+	list-style-position:inside;
+}
+#drop-cats.right .catIdChild ul{
+	direction:rtl
+}
+#drop-cats.left .catIdChild ul{
+	direction:ltr
+}
+#drop-cats .sub-title {
+	font-weight: bold;
+}
+#drop-cats{
+	display: none;
+	background: #ddeeff;
+	width:740px;
+	height:auto;
+	min-height: 390px;
+	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	z-index:999;
+}
+.btn-primary{
+	background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxsaW5lYXJHcmFkaWVudCBpZD0iZzEiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMDg4Q0MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDQ0Q0MiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZzEpIi8+PC9zdmc+')
+}

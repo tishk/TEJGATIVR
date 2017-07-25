@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<NedaPardaz>
+    <GateweySettings>
+		<IP>10.39.213.253</IP>
+		<Port>19696</Port>
+    </GateweySettings>
+    <SoundFilePath>
+		<SoundPath>persian/</SoundPath>
+    </SoundFilePath>
+
+    <PCInformation>
+		<ClientNo>211</ClientNo>
+		<DeviceCode>01</DeviceCode>
+		<MacAddress>00-50-56-BE-41-1A</MacAddress>
+		<ChannelNo>010</ChannelNo>
+    </PCInformation>
+    <CardNumberCheck>
+		<Sarmayeh>639607</Sarmayeh>
+		<Sepah>589210</Sepah>
+		<Refah>589463</Refah>
+		<Sarderat>603769</Sarderat>
+		<Melli>603799</Melli>
+		<Keshavarzi>603770</Keshavarzi>
+		<Mehr>603773</Mehr>
+		<Mellat>610433</Mellat>
+		<Saman>621986</Saman>
+		<Parsian1>622106</Parsian1>
+		<Parsian2>627884</Parsian2>
+		<Tejarat>627353</Tejarat>
+		<Tejarat2>585983</Tejarat2>
+		<EghtesadNovin>627412</EghtesadNovin>
+		<TosehSaderat>639607</TosehSaderat>
+		<Karafarin>627488</Karafarin>
+		<PostBank>627760</PostBank>
+		<SanatoMadan>627961</SanatoMadan>
+		<Maskan>628023</Maskan>
+		<EtebariToseh>628157</EtebariToseh>
+		<Sina>639346</Sina>
+		<Ayandeh1>639347</Ayandeh1>
+		<Ayandeh2>636214</Ayandeh2>
+		<TrueCardNumber>false</TrueCardNumber>
+    </CardNumberCheck>
+    
+</NedaPardaz>

@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="orm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/orm/fscontext.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/ldap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/com.ibm.mqjms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/commons-lang-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/newjarfileoform.zip!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/neda.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/jtds.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/jta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/jndi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/dhbcore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/providerutil.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/swing-worker-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/ORM-Message-Convertor.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/com.ibm.mq.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/connector.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/orm/appframework-1.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

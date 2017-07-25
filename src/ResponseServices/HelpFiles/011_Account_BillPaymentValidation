@@ -1,0 +1,35 @@
+
+Account_BillPaymentValidation:
+================================================================================
+description:validation Bill Payment by bill id with accountNumber number
+________________________________________________________________________________
+request parameters :
+--------------------------------------------------------------------------------
+param 0:Gateway IP                       :10.39.41.65
+param 1:Gateway Port                     :1364
+param 2:Command Code                     :008
+param 3:Source Account number            :3435531082
+param 4:Amount                           :120000
+param 5:Bill ID                          :12536524587852
+param 6:Payment ID                       :2563654
+________________________________________________________________________________
+response parameters:
+--------------------------------------------------------------------------------
+start of response is   :$
+Separator of fields is :*
+end of response is     :$
+--------------------------------------------------------------------------------
+param 0 :ActionCode                      :0000
+param 1 :MessageSequence                 :123456789123
+param 2 :ChannelType                     :TB
+param 3 :ChannelID                       :1
+param 4 :SourceAccount                   :3435531082
+param 5 :Amount                          :120000
+param 6 :Bill ID                         :12536524587852
+param 7 :Payment ID                      :2563654
+param 8 :ServiceCode                     :1
+param 9 :Company Code                    :091
+param 10:ResponseTime                    :13940729080201
+param 11:MAC                             :1
+________________________________________________________________________________
+================================================================================

@@ -1,0 +1,19 @@
+#!/bin/bash
+# MyApp
+#
+# description: bla bla
+# chkconfig: 345 99 01
+# description: TElBank in Runnig Status
+case $1 in
+    start)
+        /bin/bash /usr/local/bin/startTelbank.sh
+    ;;
+    stop)
+        /bin/bash /usr/local/bin/stopTelbank.sh
+    ;;
+    restart)
+
+        /bin/bash /usr/local/bin/reStartTelbank.sh
+    ;;
+esac
+exit 0

@@ -1,0 +1,58 @@
+
+Account_StatementList:
+================================================================================
+description:get StatementList
+________________________________________________________________________________
+request parameters :
+--------------------------------------------------------------------------------
+param  0:Gateway IP                             :10.39.41.65
+param  1:Gateway Port                           :1364
+param  2:Command Code                           :004
+param  3:accountNumber number                         :3435531082
+param  4:StartDate                              :13861121
+param  5:EndDate                                :13861206
+param  6:TransactionCount                       :60
+________________________________________________________________________________
+response parameters:
+--------------------------------------------------------------------------------
+start of response is            :$
+Separator of fields is          :*
+end of response is              :$
+Start of Transactions row is    :#
+Separator of Transaction fields :@
+End   of Transactions row is    :#
+--------------------------------------------------------------------------------
+param 0 :ActionCode                      :0000
+param 1 :MessageSequence                 :123456789123
+param 2 :ChannelType                     :TB
+param 3 :ChannelID                       :1
+param 4 :AccountNumber                   :3435531082
+param 5 :StartDate                       :13861121
+param 6 :EndDate                         :13861206
+param 7 :TransactionCount                :10
+param 8 :Balance                         :1520000
+param 9 :HostID                          :1
+param 10:ResponseDateTime                :13940729080201
+param 11:MAC                             :1
+param 12:Transactions                    :description in below
+--------------------------------------------------------------------------------
+Transactions Description:
+--------------------------------------------------------------------------------
+param 0 :operationCode                   :162
+param 1 :amount                          :2530000
+param 2 :CreditOrDebit                   :c       //for Credit "c" for Debit "d"
+param 3 :Transaction Date                :13861121
+param 4 :Transaction Time                :120102
+param 5 :Transaction Effective Date      :13861121
+param 6 :Document No                     :13861206
+param 7 :Document Description            :description Of document
+param 8 :Branch Code                     :2563
+param 9 :Transaction No                  :2
+param 10:LastBalance in Transaction time :2500000
+param 11:Payment ID                      :1
+--------------------------------------------------------------------------------
+result is stored in a file called
+AccountNumber-StartDate-EndDate.txt in jar file path
+example: 3435531082-13861121-13861206
+________________________________________________________________________________
+================================================================================

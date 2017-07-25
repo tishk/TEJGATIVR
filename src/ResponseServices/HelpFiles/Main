@@ -1,0 +1,31 @@
+
+List Of Command Code:
+================================================================================
+Authenticate with Pin1                   :301
+change Pin1                              :302
+Authenticate with Pin2                   :303
+change Pin2                              :304
+get Account Information                  :000
+get Account Balance                      :001
+get Mobile Of Account                    :002
+Set Mobile Of Account                    :003
+get StatementList                        :004
+get Pan Of Account                       :005
+get Account Of Pan                       :006
+register Account                         :007
+fundTransfer                             :008
+follow up FundTransfer                   :009
+Bill Payment By ID with Account          :010
+Validation Bill PaymentByID with Account :011
+get Cheque status                        :012
+get Sheba ID of accountNumber                  :013
+get Pan Of Account                       :014
+Block Account                            :015
+get Balance for Pan                      :201
+bill Payment By ID  for Pan              :202
+Block Pan                                :203
+get Account Number of Pan                :204
+get Bill Data By Telnumber               :401
+set Bill Data By Telnumber               :402
+get internalFollowUp                     :501
+================================================================================

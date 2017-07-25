@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Telbank/src/lib/flying-saucer-pdf-9.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Telbank/src/lib/sigar1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Telbank/src/lib/html2image-0.9-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Telbank/src/lib/xhtmlrenderer-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Telbank/src/lib/sigarLibForTelbank/lib/log4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Telbank/src/lib/sigarLibForTelbank/lib/sigar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

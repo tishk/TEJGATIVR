@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="TelBank">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/TelBank/asterisk-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/TelBank/itext-2.1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

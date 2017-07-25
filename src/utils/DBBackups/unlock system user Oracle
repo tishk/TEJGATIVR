@@ -1,0 +1,5 @@
+ALTER PROFILE "DEFAULT" LIMIT PASSWORD_VERIFY_FUNCTION NULL;
+
+
+
+alter user system identified by new_password accountNumber unlock;

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Monitoring/src/SystemStatus/lib/log4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Monitoring/src/SystemStatus/lib/sigar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

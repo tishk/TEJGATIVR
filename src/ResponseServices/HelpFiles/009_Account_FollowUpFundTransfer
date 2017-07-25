@@ -1,0 +1,36 @@
+
+Account_FollowUpFundTransfer:
+================================================================================
+description:Follow up Transfer money Between defined accounts
+________________________________________________________________________________
+request parameters :
+--------------------------------------------------------------------------------
+param 0:Gateway IP                       :10.39.41.65
+param 1:Gateway Port                     :1364
+param 2:Command Code                     :008
+param 3:Source Account number            :3435531082
+param 4:Destination Account number       :2536524522
+param 5:FollowUpCode                     :12345678
+param 6:Transaction DateTime             :13860122120102
+________________________________________________________________________________
+response parameters:
+--------------------------------------------------------------------------------
+start of response is   :$
+Separator of fields is :*
+end of response is     :$
+--------------------------------------------------------------------------------
+param 0 :ActionCode                      :0000
+param 1 :MessageSequence                 :123456789123
+param 2 :ChannelType                     :TB
+param 3 :ChannelID                       :1
+param 4 :SourceAccount                   :3435531082
+param 5 :Destination Account number      :2536524522
+param 5 :FollowUpCode                    :12345678
+param 6 :Amount                          :253000
+param 7 :Date                            :13861121
+param 8 :Time                            :011236
+param 9 :Status                          :SUCCESS //or FAIL  or PENDING
+param 10:ResponseTime                    :13940729080201
+param 11:MAC                             :1
+________________________________________________________________________________
+================================================================================

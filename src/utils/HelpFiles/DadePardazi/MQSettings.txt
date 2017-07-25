@@ -1,0 +1,15 @@
+crtmqm QMNAME
+strmqm QMNAME
+runmqsc QMNAME
+DEFINE LISTENER(LISTENER1) trptype (tcp) control (qmgr) port (1414)
+DEFINE CHANNEL ('SYSTEM.ADMIN.SVRCONN') CHLTYPE(SVRCONN) TRPTYPE(TCP) mcauser('mqm')
+SET CHLAUTH(*) TYPE(BLOCKUSER) USERLIST(*MQADMIN) ACTION(REMOVE)
+ALTER QMGR CHLAUTH(DISABLED)
+
+endmqm QMNAME
+strmqm QMNAME
+
+
+-----------------------------------------------------------------------------------------
+run webspher mq manager :strmqcfg
+

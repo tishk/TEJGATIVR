@@ -1,0 +1,12 @@
+C:\Users\SMirzaei\Desktop\CodeString\CodeString\bin\Debug\CodeString.dll
+C:\Users\SMirzaei\Desktop\CodeString\CodeString\bin\Debug\CodeString.pdb
+C:\Users\SMirzaei\Desktop\CodeString\CodeString\bin\Debug\CodeString.tlb
+C:\Users\SMirzaei\Desktop\CodeString\CodeString\obj\Debug\CodeString.dll
+C:\Users\SMirzaei\Desktop\CodeString\CodeString\obj\Debug\CodeString.pdb
+C:\Users\SMirzaei\Desktop\CodeString\CodeString\obj\Debug\CodeString.csprojResolveAssemblyReference.cache
+D:\New Folder\CodeString\CodeString\obj\Debug\ResolveAssemblyReference.cache
+D:\New Folder\CodeString\CodeString\obj\Debug\CodeString.dll
+D:\New Folder\CodeString\CodeString\obj\Debug\CodeString.pdb
+D:\New Folder\CodeString\CodeString\bin\Debug\CodeString.dll
+D:\New Folder\CodeString\CodeString\bin\Debug\CodeString.pdb
+D:\New Folder\CodeString\CodeString\bin\Debug\CodeString.tlb

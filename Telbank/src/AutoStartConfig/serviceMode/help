@@ -1,0 +1,14 @@
+----------------if using service mod---------------------------
+1-copy startTelbank.sh  and stopTelbank.sh to /usr/local/bin
+2-copy telbank to  /etc/init.d
+
+3-run chmod +x /etc/init.d/telbank
+4-run chkconfig --add telbank
+5-run chkconfig telbank on
+6-copy faxsetup in /usr/sbin
+----------------------------------------------------------------
+------------------------else------------------------------------
+chmod +x /ivr/reStartTelbank.sh
+chmod +x /ivr/startTelbank.sh
+chmod +x /ivr/stopTelbank.sh
+----------------------------------------------------------------

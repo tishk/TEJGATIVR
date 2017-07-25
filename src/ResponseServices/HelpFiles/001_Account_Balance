@@ -1,0 +1,36 @@
+
+Account_Balance:
+================================================================================
+description:get last balance of accountNumber
+________________________________________________________________________________
+request parameters :
+--------------------------------------------------------------------------------
+param 0:Gateway IP                       :10.39.41.65
+param 1:Gateway Port                     :1364
+param 2:Command Code                     :001
+param 3:accountNumber number                   :3435531082
+param 4:specified response filed         :4
+________________________________________________________________________________
+response parameters:
+--------------------------------------------------------------------------------
+start of response is   :$
+Separator of fields is :*
+end of response is     :$
+--------------------------------------------------------------------------------
+param 0 :ActionCode                      :0000
+param 1 :MessageSequence                 :123456789123
+param 2 :ChannelType                     :TB
+param 3 :ChannelID                       :1
+param 4 :AccountNumber                   :3435531082
+param 5 :AccountGroup                    :045
+param 6 :AvailableBalance                :1500000
+param 7 :ActualBalance                   :1570000
+param 8 :CreditOrDebit                   :C                // or D
+param 9 :CURRENCY                        :364              // for rial
+param 10:LastTransactionDate             :13940729
+param 11:HostID                          :1
+param 12:BranchCode                      :00016
+param 13:ResponseTime                    :13940729080201
+param 14:MAC                             :1
+________________________________________________________________________________
+================================================================================

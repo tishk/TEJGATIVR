@@ -1,0 +1,6 @@
+2016-06-11 17:21:12,393 ERROR [Mainchannel.MainMQ:64] here
+2016-06-11 17:21:12,871 ERROR [Mainchannel.util.JMSConnectionPool.MQSessionPool:185] com.ibm.mq.MQException: MQJE001: An MQException occurred: Completion Code 2, Reason 2009
+MQJE016: MQ queue manager closed channel immediately during connect
+Closure reason = 2009
+2016-06-11 17:21:12,872 ERROR [Mainchannel.util.JMSConnectionPool.MQSessionPool:188] javax.jms.JMSException: MQJMS2005: failed to create MQQueueManager for '10.39.41.62:IVRN'
+2016-06-11 17:21:12,873 ERROR [Mainchannel.MainMQ:133] MQJMS2005: failed to create MQQueueManager for '10.39.41.62:IVRN'

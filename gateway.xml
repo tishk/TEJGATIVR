@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="gateway" default="all">
+  
+  
+  <property file="gateway.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.bundle/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.tox/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.ear"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.swc"/>
+    <include name="*.ane"/>
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.asterisk-java.classpath">
+    <pathelement location="${basedir}/lib/TelBank/asterisk-java.jar"/>
+  </path>
+  
+  <path id="library.commons-beanutils-1.7.0.classpath">
+    <pathelement location="${basedir}/lib/IBMMQ/commons-beanutils-1.7.0.jar"/>
+  </path>
+  
+  <path id="library.commons-io-2.4.classpath">
+    <pathelement location="${basedir}/lib/commons-io-2.4.jar"/>
+  </path>
+  
+  <path id="library.commons-lang-2.3.classpath">
+    <pathelement location="${basedir}/lib/IBMMQ/commons-lang-2.3.jar"/>
+  </path>
+  
+  <path id="library.commons-logging-1.1.1.classpath">
+    <pathelement location="${basedir}/lib/IBMMQ/commons-logging-1.1.1.jar"/>
+  </path>
+  
+  <path id="library.itext-2.1.7.classpath">
+    <pathelement location="${basedir}/lib/TelBank/itext-2.1.7.jar"/>
+  </path>
+  
+  <path id="library.log4j-1.2.17.classpath">
+    <pathelement location="${basedir}/lib/IBMMQ/log4j-1.2.17.jar"/>
+  </path>
+  
+  <path id="library.ojdbc14.classpath">
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+  </path>
+  
+  <path id="library.orm.classpath">
+    <fileset dir="${basedir}/lib/orm">
+      <patternset refid="library.patterns"/>
+    </fileset>
+  </path>
+  
+  <path id="library.sqljdbc4.classpath">
+    <pathelement location="${basedir}/lib/DataBase/sqljdbc4.jar"/>
+  </path>
+  
+  
+  <!-- Global Libraries -->
+  
+  <path id="library.database.classpath">
+    <fileset dir="D:/Gateway/lib/DataBase">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <fileset dir="D:/Gateway/lib/IBMMQ">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <fileset dir="D:/Gateway/lib/Pos">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <fileset dir="D:/Gateway/lib/TelBank">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <fileset dir="D:/Gateway/lib/orm">
+      <patternset refid="library.patterns"/>
+    </fileset>
+    <pathelement location="D:/Gateway/lib/commons-io-2.4.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module Gateway -->
+  
+  <dirname property="module.gateway.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.gateway" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.gateway" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.gateway" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.gateway" value="-encoding UTF-8 -source 1.7 ${compiler.args}"/>
+  
+  <property name="gateway.output.dir" value="${module.gateway.basedir}/out/production/Gateway"/>
+  <property name="gateway.testoutput.dir" value="${module.gateway.basedir}/out/test/Gateway"/>
+  
+  <path id="gateway.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="gateway.module.production.classpath">
+    <path refid="${module.jdk.classpath.gateway}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="gateway.runtime.production.module.classpath">
+    <pathelement location="${gateway.output.dir}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="gateway.module.classpath">
+    <path refid="${module.jdk.classpath.gateway}"/>
+    <pathelement location="${gateway.output.dir}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="gateway.runtime.module.classpath">
+    <pathelement location="${gateway.testoutput.dir}"/>
+    <pathelement location="${gateway.output.dir}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.gateway">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.gateway">
+    <patternset refid="excluded.from.module.gateway"/>
+  </patternset>
+  
+  <path id="gateway.module.sourcepath">
+    <dirset dir="${module.gateway.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.gateway" depends="compile.module.gateway.production,compile.module.gateway.tests" description="Compile module Gateway"/>
+  
+  <target name="compile.module.gateway.production" depends="register.custom.compilers" description="Compile module Gateway; production classes">
+    <mkdir dir="${gateway.output.dir}"/>
+    <javac2 destdir="${gateway.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.gateway}/javac">
+      <compilerarg line="${compiler.args.gateway}"/>
+      <bootclasspath refid="gateway.module.bootclasspath"/>
+      <classpath refid="gateway.module.production.classpath"/>
+      <src refid="gateway.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.gateway"/>
+    </javac2>
+    
+    <copy todir="${gateway.output.dir}">
+      <fileset dir="${module.gateway.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.gateway.tests" depends="register.custom.compilers,compile.module.gateway.production" description="compile module Gateway; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.gateway" description="cleanup module">
+    <delete dir="${gateway.output.dir}"/>
+    <delete dir="${gateway.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module client -->
+  
+  <dirname property="module.client.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.client" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.client" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.client" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.client" value="-encoding UTF-8 -source 1.7 ${compiler.args}"/>
+  
+  <property name="client.output.dir" value="${module.client.basedir}/out/production/client"/>
+  <property name="client.testoutput.dir" value="${module.client.basedir}/out/test/client"/>
+  
+  <path id="client.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="client.module.production.classpath">
+    <path refid="${module.jdk.classpath.client}"/>
+    <pathelement location="${gateway.output.dir}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="client.runtime.production.module.classpath">
+    <pathelement location="${client.output.dir}"/>
+    <path refid="gateway.runtime.production.module.classpath"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="client.module.classpath">
+    <path refid="${module.jdk.classpath.client}"/>
+    <pathelement location="${client.output.dir}"/>
+    <pathelement location="${gateway.testoutput.dir}"/>
+    <pathelement location="${gateway.output.dir}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="client.runtime.module.classpath">
+    <pathelement location="${client.testoutput.dir}"/>
+    <pathelement location="${client.output.dir}"/>
+    <path refid="gateway.runtime.module.classpath"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.client">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.client">
+    <patternset refid="excluded.from.module.client"/>
+  </patternset>
+  
+  <path id="client.module.sourcepath">
+    <dirset dir="${module.client.basedir}/client">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.client" depends="compile.module.client.production,compile.module.client.tests" description="Compile module client"/>
+  
+  <target name="compile.module.client.production" depends="register.custom.compilers,compile.module.gateway" description="Compile module client; production classes">
+    <mkdir dir="${client.output.dir}"/>
+    <javac2 destdir="${client.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.client}/javac">
+      <compilerarg line="${compiler.args.client}"/>
+      <bootclasspath refid="client.module.bootclasspath"/>
+      <classpath refid="client.module.production.classpath"/>
+      <src refid="client.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.client"/>
+    </javac2>
+    
+    <copy todir="${client.output.dir}">
+      <fileset dir="${module.client.basedir}/client/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.client.tests" depends="register.custom.compilers,compile.module.client.production" description="compile module client; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.client" description="cleanup module">
+    <delete dir="${client.output.dir}"/>
+    <delete dir="${client.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module Telbank -->
+  
+  <dirname property="module.telbank.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.telbank" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.telbank" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.telbank" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.telbank" value="-encoding UTF-8 -source 1.7 ${compiler.args}"/>
+  
+  <property name="telbank.output.dir" value="${module.telbank.basedir}/out/production/Telbank"/>
+  <property name="telbank.testoutput.dir" value="${module.telbank.basedir}/out/test/Telbank"/>
+  
+  <path id="telbank.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="telbank.module.production.classpath">
+    <path refid="${module.jdk.classpath.telbank}"/>
+    <path refid="library.asterisk-java.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.itext-2.1.7.classpath"/>
+    <pathelement location="${gateway.output.dir}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="telbank.runtime.production.module.classpath">
+    <pathelement location="${telbank.output.dir}"/>
+    <path refid="library.asterisk-java.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.itext-2.1.7.classpath"/>
+    <path refid="gateway.runtime.production.module.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="telbank.module.classpath">
+    <path refid="${module.jdk.classpath.telbank}"/>
+    <pathelement location="${telbank.output.dir}"/>
+    <path refid="library.asterisk-java.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.itext-2.1.7.classpath"/>
+    <pathelement location="${gateway.testoutput.dir}"/>
+    <pathelement location="${gateway.output.dir}"/>
+    <path refid="library.orm.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.commons-beanutils-1.7.0.classpath"/>
+    <path refid="library.commons-lang-2.3.classpath"/>
+    <path refid="library.commons-logging-1.1.1.classpath"/>
+    <path refid="library.log4j-1.2.17.classpath"/>
+    <pathelement location="${basedir}/lib/DataBase/ojdbc14.jar"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.ojdbc14.classpath"/>
+    <path refid="library.sqljdbc4-3.0.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  <path id="telbank.runtime.module.classpath">
+    <pathelement location="${telbank.testoutput.dir}"/>
+    <pathelement location="${telbank.output.dir}"/>
+    <path refid="library.asterisk-java.classpath"/>
+    <pathelement location="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+    <path refid="library.itext-2.1.7.classpath"/>
+    <path refid="gateway.runtime.module.classpath"/>
+    <path refid="library.database.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.telbank">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.telbank">
+    <patternset refid="excluded.from.module.telbank"/>
+  </patternset>
+  
+  <path id="telbank.module.sourcepath">
+    <dirset dir="${module.telbank.basedir}/Telbank">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.telbank" depends="compile.module.telbank.production,compile.module.telbank.tests" description="Compile module Telbank"/>
+  
+  <target name="compile.module.telbank.production" depends="register.custom.compilers,compile.module.gateway" description="Compile module Telbank; production classes">
+    <mkdir dir="${telbank.output.dir}"/>
+    <javac2 destdir="${telbank.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.telbank}/javac">
+      <compilerarg line="${compiler.args.telbank}"/>
+      <bootclasspath refid="telbank.module.bootclasspath"/>
+      <classpath refid="telbank.module.production.classpath"/>
+      <src refid="telbank.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.telbank"/>
+    </javac2>
+    
+    <copy todir="${telbank.output.dir}">
+      <fileset dir="${module.telbank.basedir}/Telbank/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.telbank.tests" depends="register.custom.compilers,compile.module.telbank.production" description="compile module Telbank; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.telbank" description="cleanup module">
+    <delete dir="${telbank.output.dir}"/>
+    <delete dir="${telbank.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.gateway, clean.module.client, clean.module.telbank, clean.artifact.client" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.gateway, compile.module.client, compile.module.telbank" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.client" value="${basedir}/out/artifacts/client"/>
+    <property name="artifact.output.gateway" value="${basedir}/out/artifacts/Gateway"/>
+    <property name="artifact.output.telbank" value="${basedir}/out/artifacts/Telbank"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.client.jar" value="${artifacts.temp.dir}/client.jar"/>
+    <property name="temp.jar.path.Gateway.jar" value="${artifacts.temp.dir}/Gateway.jar"/>
+    <property name="temp.jar.path.Telbank.jar" value="${artifacts.temp.dir}/Telbank.jar"/>
+  </target>
+  
+  <target name="clean.artifact.client" description="clean client artifact output">
+    <delete dir="${artifact.output.client}"/>
+  </target>
+  
+  <target name="artifact.client" depends="init.artifacts, compile.module.client, compile.module.gateway" description="Build &#39;client&#39; artifact">
+    <mkdir dir="${artifact.output.client}"/>
+    <jar destfile="${temp.jar.path.client.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${client.output.dir}"/>
+      <zipfileset dir="${gateway.output.dir}"/>
+    </jar>
+    <copy file="${temp.jar.path.client.jar}" tofile="${artifact.output.client}/client.jar"/>
+    <copy file="${basedir}/lib/IBMMQ/commons-logging-1.1.1.jar" tofile="${artifact.output.client}/commons-logging-1.1.1.jar"/>
+    <copy file="${basedir}/lib/orm/jms.jar" tofile="${artifact.output.client}/jms.jar"/>
+    <copy file="${basedir}/lib/orm/jta.jar" tofile="${artifact.output.client}/jta.jar"/>
+    <copy file="${basedir}/lib/orm/jndi.jar" tofile="${artifact.output.client}/jndi.jar"/>
+    <copy file="${basedir}/lib/orm/jtds.jar" tofile="${artifact.output.client}/jtds.jar"/>
+    <copy file="${basedir}/lib/orm/ldap.jar" tofile="${artifact.output.client}/ldap.jar"/>
+    <copy file="${basedir}/lib/orm/neda.jar" tofile="${artifact.output.client}/neda.jar"/>
+    <copy file="${basedir}/lib/orm/dhbcore.jar" tofile="${artifact.output.client}/dhbcore.jar"/>
+    <copy file="${basedir}/lib/orm/connector.jar" tofile="${artifact.output.client}/connector.jar"/>
+    <copy file="${basedir}/lib/orm/fscontext.jar" tofile="${artifact.output.client}/fscontext.jar"/>
+    <copy file="${basedir}/lib/orm/com.ibm.mq.jar" tofile="${artifact.output.client}/com.ibm.mq.jar"/>
+    <copy file="${basedir}/lib/orm/providerutil.jar" tofile="${artifact.output.client}/providerutil.jar"/>
+    <copy file="${basedir}/lib/orm/com.ibm.mqjms.jar" tofile="${artifact.output.client}/com.ibm.mqjms.jar"/>
+    <copy file="${basedir}/lib/orm/newjarfileoform.zip" tofile="${artifact.output.client}/newjarfileoform.zip"/>
+    <copy file="${basedir}/lib/orm/commons-lang-2.3.jar" tofile="${artifact.output.client}/commons-lang-2.3.jar"/>
+    <copy file="${basedir}/lib/orm/swing-worker-1.1.jar" tofile="${artifact.output.client}/swing-worker-1.1.jar"/>
+    <copy file="${basedir}/lib/orm/appframework-1.0.3.jar" tofile="${artifact.output.client}/appframework-1.0.3.jar"/>
+    <copy file="${basedir}/lib/orm/commons-logging-1.1.1.jar" tofile="${artifact.output.client}/commons-logging-1.1.1.jar"/>
+    <copy file="${basedir}/lib/orm/ORM-Message-Convertor.jar" tofile="${artifact.output.client}/ORM-Message-Convertor.jar"/>
+    <copy file="${basedir}/lib/orm/commons-beanutils-1.7.0.jar" tofile="${artifact.output.client}/commons-beanutils-1.7.0.jar"/>
+    <copy file="${basedir}/lib/commons-io-2.4.jar" tofile="${artifact.output.client}/commons-io-2.4.jar"/>
+    <copy file="${basedir}/lib/DataBase/ojdbc14.jar" tofile="${artifact.output.client}/ojdbc14.jar"/>
+    <copy file="${basedir}/lib/IBMMQ/log4j-1.2.17.jar" tofile="${artifact.output.client}/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/lib/IBMMQ/jdom-1.0.jar" tofile="${artifact.output.client}/jdom-1.0.jar"/>
+    <copy file="${basedir}/lib/IBMMQ/commons-lang-2.3.jar" tofile="${artifact.output.client}/commons-lang-2.3.jar"/>
+    <copy file="${basedir}/lib/IBMMQ/commons-beanutils-1.7.0.jar" tofile="${artifact.output.client}/commons-beanutils-1.7.0.jar"/>
+    <copy file="${basedir}/lib/DataBase/ojdbc14.jar" tofile="${artifact.output.client}/ojdbc14.jar"/>
+  </target>
+  
+  <target name="artifact.gateway" depends="init.artifacts, compile.module.gateway" description="Build &#39;Gateway&#39; artifact">
+    <property name="artifact.temp.output.gateway" value="${artifacts.temp.dir}/Gateway"/>
+    <mkdir dir="${artifact.temp.output.gateway}"/>
+    <jar destfile="${temp.jar.path.Gateway.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${gateway.output.dir}"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/commons-logging-1.1.1.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jms.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jta.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jndi.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jtds.jar"/>
+      <zipfileset src="${basedir}/lib/orm/ldap.jar"/>
+      <zipfileset src="${basedir}/lib/orm/neda.jar"/>
+      <zipfileset src="${basedir}/lib/orm/dhbcore.jar"/>
+      <zipfileset src="${basedir}/lib/orm/connector.jar"/>
+      <zipfileset src="${basedir}/lib/orm/fscontext.jar"/>
+      <zipfileset src="${basedir}/lib/orm/com.ibm.mq.jar"/>
+      <zipfileset src="${basedir}/lib/orm/providerutil.jar"/>
+      <zipfileset src="${basedir}/lib/orm/com.ibm.mqjms.jar"/>
+      <zipfileset src="${basedir}/lib/orm/newjarfileoform.zip"/>
+      <zipfileset src="${basedir}/lib/orm/commons-lang-2.3.jar"/>
+      <zipfileset src="${basedir}/lib/orm/swing-worker-1.1.jar"/>
+      <zipfileset src="${basedir}/lib/orm/appframework-1.0.3.jar"/>
+      <zipfileset src="${basedir}/lib/orm/commons-logging-1.1.1.jar"/>
+      <zipfileset src="${basedir}/lib/orm/ORM-Message-Convertor.jar"/>
+      <zipfileset src="${basedir}/lib/orm/commons-beanutils-1.7.0.jar"/>
+      <zipfileset src="${basedir}/lib/commons-io-2.4.jar"/>
+      <zipfileset src="${basedir}/lib/DataBase/ojdbc14.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/log4j-1.2.17.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/commons-lang-2.3.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/commons-beanutils-1.7.0.jar"/>
+    </jar>
+    <copy file="${temp.jar.path.Gateway.jar}" tofile="${artifact.temp.output.gateway}/Gateway.jar"/>
+  </target>
+  
+  <target name="artifact.telbank" depends="init.artifacts, compile.module.telbank, compile.module.gateway" description="Build &#39;Telbank&#39; artifact">
+    <property name="artifact.temp.output.telbank" value="${artifacts.temp.dir}/Telbank"/>
+    <mkdir dir="${artifact.temp.output.telbank}"/>
+    <jar destfile="${temp.jar.path.Telbank.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${telbank.output.dir}"/>
+      <zipfileset dir="${gateway.output.dir}"/>
+      <zipfileset src="${basedir}/lib/DataBase/ojdbc14.jar"/>
+      <zipfileset src="${basedir}/lib/TelBank/itext-2.1.7.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/commons-beanutils-1.7.0.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jms.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jta.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jndi.jar"/>
+      <zipfileset src="${basedir}/lib/orm/jtds.jar"/>
+      <zipfileset src="${basedir}/lib/orm/ldap.jar"/>
+      <zipfileset src="${basedir}/lib/orm/neda.jar"/>
+      <zipfileset src="${basedir}/lib/orm/dhbcore.jar"/>
+      <zipfileset src="${basedir}/lib/orm/connector.jar"/>
+      <zipfileset src="${basedir}/lib/orm/fscontext.jar"/>
+      <zipfileset src="${basedir}/lib/orm/com.ibm.mq.jar"/>
+      <zipfileset src="${basedir}/lib/orm/providerutil.jar"/>
+      <zipfileset src="${basedir}/lib/orm/com.ibm.mqjms.jar"/>
+      <zipfileset src="${basedir}/lib/orm/newjarfileoform.zip"/>
+      <zipfileset src="${basedir}/lib/orm/commons-lang-2.3.jar"/>
+      <zipfileset src="${basedir}/lib/orm/swing-worker-1.1.jar"/>
+      <zipfileset src="${basedir}/lib/orm/appframework-1.0.3.jar"/>
+      <zipfileset src="${basedir}/lib/orm/commons-logging-1.1.1.jar"/>
+      <zipfileset src="${basedir}/lib/orm/ORM-Message-Convertor.jar"/>
+      <zipfileset src="${basedir}/lib/orm/commons-beanutils-1.7.0.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/commons-lang-2.3.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/commons-logging-1.1.1.jar"/>
+      <zipfileset src="${basedir}/lib/TelBank/asterisk-java.jar"/>
+      <zipfileset src="${basedir}/lib/commons-io-2.4.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/jdom-1.0.jar"/>
+      <zipfileset src="${basedir}/lib/IBMMQ/log4j-1.2.17.jar"/>
+    </jar>
+    <copy file="${temp.jar.path.Telbank.jar}" tofile="${artifact.temp.output.telbank}/Telbank.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.client, artifact.gateway, artifact.telbank" description="Build all artifacts">
+    <mkdir dir="${artifact.output.gateway}"/>
+    <copy todir="${artifact.output.gateway}">
+      <fileset dir="${artifact.temp.output.gateway}"/>
+    </copy>
+    <mkdir dir="${artifact.output.telbank}"/>
+    <copy todir="${artifact.output.telbank}">
+      <fileset dir="${artifact.temp.output.telbank}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

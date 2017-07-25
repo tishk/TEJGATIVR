@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Sangoma">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sangoma/Sangoma/VEGA_R100S051.zip!/" />
+      <root url="jar://$PROJECT_DIR$/sangoma/Sangoma/hyperterminal.zip!/" />
+      <root url="jar://$PROJECT_DIR$/sangoma/Sangoma/vs_scanner_v5.zip!/" />
+      <root url="jar://$PROJECT_DIR$/sangoma/Sangoma/hyperterminal1.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

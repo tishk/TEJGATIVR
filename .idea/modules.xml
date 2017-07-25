@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1554/1554.iml" filepath="$PROJECT_DIR$/1554/1554.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CurrencyTransformer/CurrencyTransformer.iml" filepath="$PROJECT_DIR$/CurrencyTransformer/CurrencyTransformer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DBMigration/DBMigration.iml" filepath="$PROJECT_DIR$/DBMigration/DBMigration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EncryptionTest/EncryptionTest.iml" filepath="$PROJECT_DIR$/EncryptionTest/EncryptionTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FaxTest/FaxTest.iml" filepath="$PROJECT_DIR$/FaxTest/FaxTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway9605022257.iml" filepath="$PROJECT_DIR$/Gateway9605022257.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MonioringTest/MonioringTest.iml" filepath="$PROJECT_DIR$/MonioringTest/MonioringTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Monitoring/Monitoring.iml" filepath="$PROJECT_DIR$/Monitoring/Monitoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MonitoringDB/MonitoringDB.iml" filepath="$PROJECT_DIR$/MonitoringDB/MonitoringDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PaymentTest/PaymentTest.iml" filepath="$PROJECT_DIR$/PaymentTest/PaymentTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StresTest/StresTest.iml" filepath="$PROJECT_DIR$/StresTest/StresTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Telbank/Telbank.iml" filepath="$PROJECT_DIR$/Telbank/Telbank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestPin/TestPin.iml" filepath="$PROJECT_DIR$/TestPin/TestPin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestPlayVoiceSimulator/TestPlayVoiceSimulator.iml" filepath="$PROJECT_DIR$/TestPlayVoiceSimulator/TestPlayVoiceSimulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/sigar/bindings/java/bindings.iml" filepath="$PROJECT_DIR$/lib/sigar/bindings/java/bindings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+
+
+chmod +x /ivr/reStartTelbank.sh
+chmod +x /ivr/startTelbank.sh
+chmod +x /ivr/stopTelbank.sh
